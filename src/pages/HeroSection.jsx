@@ -25,7 +25,7 @@ const HeroSection = () => {
 
         <div className="lg:w-1/2 flex justify-center mb-8 lg:mb-0">
           <img
-            src="src\assets\myImage2.jpg"
+            src="public\myImage2.jpg"
             alt="Profile"
             className="rounded-full w-40 h-40 md:w-52 md:h-52 border-4 border-yellow-500 shadow-lg"
           />
