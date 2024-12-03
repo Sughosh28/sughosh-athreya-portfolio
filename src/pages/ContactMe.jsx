@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoadingBar from "react-top-loading-bar";
+
 
 
 const ContactMe = () => {
@@ -13,6 +15,8 @@ const ContactMe = () => {
   const [message, setMessage] = useState()
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const loadingBarRef = useRef(null); 
+
 
 
   const handleInputChange = (e) => {
@@ -23,6 +27,9 @@ const ContactMe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
+    if (loadingBarRef.current) {
+      loadingBarRef.current.continuousStart();
+    }
 
     emailjs
       .sendForm(
@@ -37,6 +44,10 @@ const ContactMe = () => {
           setIsSubmitted(true);
           setIsSending(false)
           toast.success(`Thank you for reaching out! I'll get back to you soon.`)
+          if (loadingBarRef.current) {
+            loadingBarRef.current.complete(); 
+          }         
+          
           setTimeout(() => {
             setMessage(" ")
           }, 2500);
@@ -45,6 +56,9 @@ const ContactMe = () => {
           console.log("Error sending message", error.text);
           setIsSending(false);
           toast.error("Failed to send the message. Please try again later.");
+          if (loadingBarRef.current) {
+            loadingBarRef.current.complete(); 
+          }
         }
       );
 
@@ -52,6 +66,9 @@ const ContactMe = () => {
   };
 
   return (
+    <>
+    <LoadingBar color="#facc15" ref={loadingBarRef} shadow={true} />
+
     <section id="contact" className="py-16 bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-2xl sm:text-5xl lg:text-4xl font-bold text-yellow-500 mb-8">
@@ -133,7 +150,9 @@ const ContactMe = () => {
       theme="dark"
       />
     </section>
+    </>
   );
+  
 };
 
 export default ContactMe;
