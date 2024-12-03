@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -33,13 +36,15 @@ const ContactMe = () => {
           console.log("Message sent successfully", result.text);
           setIsSubmitted(true);
           setIsSending(false)
-          setMessage("Thank you for reaching out! I'll get back to you soon.")
+          toast.success(`Thank you for reaching out! I'll get back to you soon.`)
           setTimeout(() => {
             setMessage(" ")
           }, 2500);
         },
         (error) => {
           console.log("Error sending message", error.text);
+          setIsSending(false);
+          toast.error("Failed to send the message. Please try again later.");
         }
       );
 
@@ -115,6 +120,18 @@ const ContactMe = () => {
           </div>
         </form>
       </div>
+      <ToastContainer
+      position="top-right"
+      autoClose={2500}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      />
     </section>
   );
 };
