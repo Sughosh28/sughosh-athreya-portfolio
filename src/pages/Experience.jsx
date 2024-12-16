@@ -15,18 +15,28 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section id="exp" className="py-16 bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl sm:text-5xl lg:text-4xl font-bold text-yellow-500 mb-8">Experience</h2>
-        <div className="space-y-8">
+    <section id="exp" className="py-12 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white">
+      <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-8 text-center">
+          Experience
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
           {experienceData.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+              className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg 
+                         transform hover:scale-105 transition-all duration-300 
+                         border border-gray-700 hover:border-yellow-500/50
+                         group relative overflow-hidden"
             >
-              <h3 className="text-2xl font-semibold text-yellow-500 mb-2">{item.title}</h3>
-              <h4 className="text-xl font-medium text-gray-400 mb-4">{item.company}</h4>
-              <p className="text-lg">{item.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <h3 className="text-xl font-bold text-yellow-400 mb-2">{item.title}</h3>
+              <h4 className="text-lg font-medium text-gray-300 mb-3 flex items-center">
+                <span className="mr-2">@</span>{item.company}
+              </h4>
+              <p className="text-gray-300 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

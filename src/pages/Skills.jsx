@@ -72,25 +72,43 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-yellow-500 mb-8">Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {skillsData.map((item) => (
-            <div
-              key={item.id}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
-            >
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-16 h-16">{item.svg}</div>
-              </div>
-              <h3 className="text-2xl font-semibold text-yellow-500 mb-4">{item.name}</h3>
-              <p className="text-lg">{item.description}</p>
+    // Update the section's container styling
+<section id="skills" className="py-24 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white min-h-screen">
+  <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-16 text-center">
+      Technical Skills
+    </h2>
+    
+    {/* Update the grid layout */}
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+      {skillsData.map((item) => (
+        <div
+          key={item.id}
+          className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 
+                     hover:border-yellow-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/10
+                     hover:-translate-y-1"
+        >
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
+              {item.svg}
             </div>
-          ))}
+          </div>
+          
+          <h3 className="text-xl font-bold text-yellow-400 mb-4 group-hover:text-yellow-300 
+                         transition-colors duration-300">
+            {item.name}
+          </h3>
+          
+          <p className="text-gray-300 text-sm leading-relaxed group-hover:text-white 
+                        transition-colors duration-300">
+            {item.description}
+          </p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 
