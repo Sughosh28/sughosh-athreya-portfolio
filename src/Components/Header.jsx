@@ -5,11 +5,10 @@ const Header = () => {
 
     const listItems = [
         { id: 1, fieldName: "Home", path: "#home" },
-        { id: 2, fieldName: "About", path: "#about" },
-        { id: 3, fieldName: "Experience", path: "#exp" },
-        { id: 4, fieldName: "Skills", path: "#skills" },
-        { id: 5, fieldName: "Projects", path: "#projects" },
-        { id: 6, fieldName: "Contact Me", path: "#contact" },
+        { id: 2, fieldName: "Experience", path: "#exp" },
+        { id: 3, fieldName: "Skills", path: "#skills" },
+        { id: 4, fieldName: "Projects", path: "#projects" },
+        { id: 5, fieldName: "Contact Me", path: "#contact" },
     ];
 
     return (
