@@ -29,9 +29,9 @@ const HeroSection = () => {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <img
-              src="/myImage2.JPG"
+              src="/myImage2.jpg"
               alt="Profile"
-              className="relative rounded-full w-52 h-52 md:w-64 md:h-64 shadow-xl object-cover transform hover:scale-105 transition-transform duration-300 brightness-75 contrast-125"
+              className="relative rounded-full w-52 h-52 md:w-64 md:h-64 shadow-xl object-cover transform hover:scale-105 transition-transform duration-300 "
             />
           </div>
         </div>
