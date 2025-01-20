@@ -15,6 +15,11 @@ const projectsData = [
     link: "https://github.com/Sughosh28/IncidentReport",
   },
   {
+    name: "Booking Bridge",
+    description: "Backend application for seamless event booking management with secure APIs and efficient data handling.",
+    link: "https://github.com/Sughosh28/event-booking-backend",
+  },
+  {
     name: "Heart Disease Prediction",
     description:
       "Federated learning model for predicting heart disease using AI.",

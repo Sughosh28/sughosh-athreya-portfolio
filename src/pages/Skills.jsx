@@ -22,7 +22,6 @@ const criblSvg = (
 );
 
 
-
 const skillsData = [
   {
     id: '1',
