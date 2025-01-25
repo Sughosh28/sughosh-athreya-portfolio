@@ -63,26 +63,26 @@ const ContactMe = () => {
   return (
     <>
       <LoadingBar color="#facc15" ref={loadingBarRef} shadow={true} />
-      <section id="contact" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-black min-h-screen flex items-center">
+      <section id="contact" className="py-20 bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-50 min-h-screen flex items-center">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Get in Touch
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Feel free to reach out if you have any questions or just want to connect. I'm always excited to collaborate!
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto backdrop-blur-lg bg-gray-800/50 p-8 rounded-2xl shadow-2xl border border-gray-700">
+          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white/70 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-yellow-200">
             {isSubmitted && (
-              <div className="text-green-400 font-semibold mb-6 text-center">
+              <div className="text-green-600 font-semibold mb-6 text-center">
                 {message}
               </div>
             )}
             <div className="space-y-6">
               <div className="group">
-                <label htmlFor="name" className="block text-sm font-medium text-yellow-400 mb-2 transition-all duration-200">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2 transition-all duration-200">
                   Your Name
                 </label>
                 <input
@@ -92,13 +92,13 @@ const ContactMe = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full p-4 bg-gray-700/50 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
+                  className="w-full p-4 bg-white/50 text-gray-800 rounded-lg border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
                   placeholder="Full Name"
                 />
               </div>
 
               <div className="group">
-                <label htmlFor="email" className="block text-sm font-medium text-yellow-400 mb-2 transition-all duration-200">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2 transition-all duration-200">
                   Your Email
                 </label>
                 <input
@@ -108,13 +108,13 @@ const ContactMe = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full p-4 bg-gray-700/50 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
+                  className="w-full p-4 bg-white/50 text-gray-800 rounded-lg border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
                   placeholder="Email"
                 />
               </div>
 
               <div className="group">
-                <label htmlFor="message" className="block text-sm font-medium text-yellow-400 mb-2 transition-all duration-200">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2 transition-all duration-200">
                   Your Message
                 </label>
                 <textarea
@@ -123,14 +123,14 @@ const ContactMe = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full p-4 bg-gray-700/50 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300 min-h-[150px]"
+                  className="w-full p-4 bg-white/50 text-gray-800 rounded-lg border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300 min-h-[150px]"
                   placeholder="Your message here..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 bg-gradient-to-r from-yellow-400 to-yellow-600 text-gray-900 rounded-lg font-bold hover:from-yellow-500 hover:to-yellow-700 transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="w-full py-4 px-6 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg font-bold transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 shadow-lg"
                 disabled={isSending}
               >
                 {isSending ? (
@@ -159,7 +159,7 @@ const ContactMe = () => {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="dark"
+          theme="light"
         />
       </section>
     </>
