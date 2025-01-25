@@ -72,9 +72,9 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white min-h-screen">
+    <section id="skills" className="py-24 bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-16 text-center">
           Technical Skills
         </h2>
         
@@ -82,17 +82,20 @@ const Skills = () => {
           {skillsData.map((item) => (
             <div
               key={item.id}
-              className="group flex flex-col items-center bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 
-                         hover:border-yellow-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/10
-                         hover:-translate-y-1"
+              className="group flex flex-col items-center bg-white/70 backdrop-blur-sm p-8 rounded-2xl 
+                       border border-yellow-200 hover:border-yellow-400 transition-all duration-300 
+                       hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="w-16 h-16 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mb-4 transform group-hover:scale-110 transition-transform duration-300 
+                          group-hover:rotate-3">
                 {item.svg}
               </div>
-              <h3 className="text-xl font-bold text-yellow-400 text-center group-hover:text-yellow-300 
-                           transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-800 text-center group-hover:text-yellow-600
+                          transition-colors duration-300">
                 {item.name}
               </h3>
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/20 via-yellow-100/10 to-transparent 
+                          opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
             </div>
           ))}
         </div>

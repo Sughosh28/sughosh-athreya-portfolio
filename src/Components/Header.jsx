@@ -12,30 +12,27 @@ const Header = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white shadow-lg backdrop-blur-sm">
-            <nav className="container mx-auto px-6 py-4">
+        <header className="sticky top-0 z-50 bg-yellow-100/80 backdrop-blur-md shadow-sm">
+            <nav className="container mx-auto px-8 py-5">
                 <div className="flex justify-center items-center">
-                    <ul className="hidden md:flex space-x-12">
+                    <ul className="hidden md:flex space-x-16">
                         {listItems.map(({ id, fieldName, path }) => (
-                            <li key={id}>
+                            <li key={id} className="relative group">
                                 <a
                                     href={`${path}`}
-                                    className="text-gray-200 hover:text-yellow-400 font-medium tracking-wide py-2 px-4 transition-all duration-300 hover:scale-110 inline-block"
+                                    className="text-gray-700 font-medium tracking-wide py-2 transition-all duration-300 group-hover:text-yellow-600"
                                 >
                                     {fieldName}
+                                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                                 </a>
                             </li>
                         ))}
-
-
-
-                        
                     </ul>
 
                     <div className="md:hidden w-full flex justify-end">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="text-white p-2 hover:bg-gray-800 rounded-lg transition-colors duration-300"
+                            className="text-gray-700 p-2 rounded-full hover:bg-yellow-200/50 transition-all duration-300 active:scale-95"
                             aria-label="Toggle menu"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -44,12 +41,12 @@ const Header = () => {
                         </button>
 
                         {isMenuOpen && (
-                            <ul className="absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-md shadow-xl py-4 space-y-2 border-t border-gray-800">
+                            <ul className="absolute top-full left-0 w-full bg-yellow-100/90 backdrop-blur-lg shadow-lg py-6 space-y-4 border-t border-yellow-200/50 animate-fadeIn">
                                 {listItems.map(({ id, fieldName, path }) => (
                                     <li key={id}>
                                         <a
                                             href={`${path}`}
-                                            className="block text-center py-3 px-6 text-gray-200 hover:text-yellow-400 hover:bg-gray-800/50 transition-all duration-300"
+                                            className="block text-center py-3 px-6 text-gray-700 hover:text-yellow-600 hover:bg-yellow-200/50 transition-all duration-300"
                                             onClick={() => setIsMenuOpen(false)}
                                         >
                                             {fieldName}
