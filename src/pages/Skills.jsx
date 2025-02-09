@@ -72,9 +72,9 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-black min-h-screen">
+    <section id="skills" className="py-24 bg-gradient-to-b from-slate-950 via-gray-900 to-black min-h-screen">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-12">
+        <h2 className="text-5xl font-bold text-center text-gray-100 mb-12">
           Technical Skills
         </h2>
         
@@ -82,18 +82,20 @@ const Skills = () => {
           {skillsData.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl 
-                       border border-gray-700 hover:border-yellow-500 
-                       shadow-lg hover:shadow-yellow-500/20 transition-all duration-300"
+              className="group relative bg-slate-900/50 backdrop-blur-sm p-8 rounded-2xl
+                       border border-slate-800 hover:border-slate-600
+                       shadow-lg hover:shadow-slate-800/20 transition-all duration-300"
             >
               <div className="w-16 h-16 mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {item.svg}
               </div>
-              <h3 className="text-xl font-bold text-yellow-400 text-center group-hover:text-yellow-300
+  
+              <h3 className="text-xl font-bold text-gray-200 text-center group-hover:text-white
                           transition-colors duration-300">
                 {item.name}
               </h3>
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-yellow-400/5 to-transparent 
+  
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800/10 via-slate-700/5 to-transparent
                           opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
             </div>
           ))}
@@ -101,6 +103,7 @@ const Skills = () => {
       </div>
     </section>
   );
+  
 };
  
 export default Skills;
