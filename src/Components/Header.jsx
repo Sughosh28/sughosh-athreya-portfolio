@@ -32,8 +32,8 @@ const Header = () => {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-slate-900/80 backdrop-blur-xl shadow-lg shadow-slate-900/20"
-          : "bg-slate-900/50 backdrop-blur-sm"
+          ? "bg-slate-900/80  shadow-lg shadow-slate-900/20"
+          : "bg-slate-900/50 "
       }`}
     >
       <nav className="container mx-auto px-8 py-4">
@@ -96,13 +96,13 @@ const Header = () => {
               />
             )}
   
-            <div
-              className={`fixed top-0 right-0 h-full w-72
-                      bg-slate-900 shadow-2xl z-50
-                      transform transition-transform duration-300 ease-in-out
-                      ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
-                      border-l border-slate-800`}
-            >
+  <div
+      className={`fixed top-0 right-0 h-full w-72
+                bg-slate-950 shadow-2xl z-50
+                transform transition-transform duration-300 ease-in-out
+                ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
+                border-l border-slate-800`}
+    >
               <div className="pt-20 px-4">
                 <ul className="space-y-2">
                   {listItems.map(({ id, fieldName, path }) => (
