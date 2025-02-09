@@ -18,42 +18,41 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="bg-slate-900 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-pink-500/10 pointer-events-none"></div>
-            
-            <div className="container mx-auto px-6 py-8 relative">
-                <div className="flex flex-col items-center space-y-6">
-                    
-                    
-                    <div className="flex space-x-6">
-                        {footerItems.map((item) => (
-                            <Link
-                                key={item.id}
-                                to={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-all duration-300"
-                                aria-label={item.title}
-                            >
-                                {item.svgImage}
-                                <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 
-                                               bg-slate-800 text-white px-2 py-1 rounded text-sm
-                                               opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    {item.title}
-                                </span>
-                            </Link>
-                        ))}
-                    </div>
-                    
-                    <p className="text-gray-400 text-sm">
-                        &copy; {new Date().getFullYear()} Sughosh Athreya K N. All rights reserved.
-                    </p>
-                </div>
+        <footer className="bg-slate-950 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-800/10 pointer-events-none"></div>
+          
+          <div className="container mx-auto px-6 py-8 relative">
+            <div className="flex flex-col items-center space-y-6">
+              <div className="flex space-x-6">
+                {footerItems.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-2 bg-slate-900 rounded-lg hover:bg-slate-800 transition-all duration-300"
+                    aria-label={item.title}
+                  >
+                    {item.svgImage}
+                    <span className="absolute -top-10 left-1/2 transform -translate-x-1/2
+                                   bg-slate-900 text-gray-200 px-2 py-1 rounded text-sm
+                                   opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {item.title}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+              
+              <p className="text-gray-400 text-sm">
+                &copy; {new Date().getFullYear()} Sughosh Athreya K N. All rights reserved.
+              </p>
             </div>
-            
-            <div className="h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          </div>
+          
+          <div className="h-1 bg-gradient-to-r from-slate-800 to-slate-700"></div>
         </footer>
-    );
+      );
+      
 };
 
 export default Footer;

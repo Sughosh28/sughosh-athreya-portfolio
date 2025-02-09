@@ -49,21 +49,21 @@ const ContactMe = () => {
 
   return (
     <>
-      <LoadingBar color="#8B5CF6" ref={loadingBarRef} shadow={true} />
-      <section id="contact" className="py-20 bg-slate-900 min-h-screen flex items-center relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-pink-500/10"></div>
+      <LoadingBar color="#1e293b" ref={loadingBarRef} shadow={true} />
+      <section id="contact" className="py-20 bg-slate-950 min-h-screen flex items-center relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-800/10"></div>
         
         <div className="container mx-auto px-4 md:px-6 max-w-4xl relative">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-500 to-pink-500 text-transparent bg-clip-text mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-6">
               Let's Connect
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-400">
               Have a project in mind? Let's create something amazing together.
             </p>
           </div>
-
-          <form onSubmit={handleSubmit} className="space-y-8 backdrop-blur-lg bg-slate-800/50 p-8 rounded-2xl shadow-2xl border border-slate-700">
+  
+          <form onSubmit={handleSubmit} className="space-y-8 backdrop-blur-lg bg-slate-900/50 p-8 rounded-2xl shadow-2xl border border-slate-800">
             <div className="group">
               <label htmlFor="name" className="block text-gray-300 font-medium mb-2">
                 Name
@@ -75,11 +75,11 @@ const ContactMe = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-slate-900/50 text-white rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-slate-950/50 text-white rounded-lg border border-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:border-transparent transition-all duration-300"
                 placeholder="Your name"
               />
             </div>
-
+  
             <div className="group">
               <label htmlFor="email" className="block text-gray-300 font-medium mb-2">
                 Email
@@ -91,11 +91,11 @@ const ContactMe = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-slate-900/50 text-white rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 bg-slate-950/50 text-white rounded-lg border border-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:border-transparent transition-all duration-300"
                 placeholder="your@email.com"
               />
             </div>
-
+  
             <div className="group">
               <label htmlFor="message" className="block text-gray-300 font-medium mb-2">
                 Message
@@ -106,15 +106,15 @@ const ContactMe = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-slate-900/50 text-white rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 min-h-[150px] resize-y"
+                className="w-full px-4 py-3 bg-slate-950/50 text-white rounded-lg border border-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:border-transparent transition-all duration-300 min-h-[150px] resize-y"
                 placeholder="Send me a message..."
               ></textarea>
             </div>
-
+  
             <button
               type="submit"
               disabled={isSending}
-              className="w-full py-4 px-6  bg-gradient-to-r from-yellow-500 to-yellow-300 text-white rounded-lg font-bold transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-70"
+              className="w-full py-4 px-6 bg-slate-800 text-white rounded-lg font-bold transform hover:scale-[1.02] hover:bg-slate-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-70"
             >
               {isSending ? (
                 <span className="flex items-center justify-center">
@@ -130,7 +130,7 @@ const ContactMe = () => {
             </button>
           </form>
         </div>
-
+  
         <ToastContainer
           position="bottom-right"
           theme="dark"
@@ -139,6 +139,7 @@ const ContactMe = () => {
       </section>
     </>
   );
+  
 };
 
 export default ContactMe;
