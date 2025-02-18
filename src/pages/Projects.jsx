@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 
 const projectsData = [
   {
+    name: "Incident Report System",
+    description:
+      "A secure web-based platform for managing incident reports, ensuring data integrity with Spring Security. Features real-time updates, CSRF protection, and audit logging.",
+    link: "https://github.com/Sughosh28/IncidentReport",
+    tags: ["Spring Boot", "Spring Security",  "CSRF Protection", "REST API"],
+  },
+  {
     name: "QuizO - A Quiz Application",
     description:
       "A scalable microservices-based quiz application built with Spring Boot, PostgreSQL, and Eureka for service discovery. Supports dynamic quiz creation, result processing, and seamless inter-service communication.",
@@ -10,12 +17,14 @@ const projectsData = [
     tags: ["Spring Boot", "PostgreSQL", "Microservices", "Eureka", "REST API"],
   },
   {
-    name: "Incident Report System",
+    name: "Blogging Platform",
     description:
-      "A secure web-based platform for managing incident reports, ensuring data integrity with Spring Security. Features real-time updates, CSRF protection, and audit logging.",
-    link: "https://github.com/Sughosh28/IncidentReport",
-    tags: ["Spring Boot", "Spring Security",  "CSRF Protection", "REST API"],
+      "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
+    link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
+    live: "http://blogsbysughosh.xyz/home",
+    tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
   },
+ 
   {
     name: "Booking Bridge",
     description:
@@ -31,16 +40,7 @@ const projectsData = [
       "Email Notifications",
       "Push Notifications"
     ],
-  },
-  
-  {
-    name: "Blogging Platform",
-    description:
-      "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
-    link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
-    live: "http://blogsbysughosh.xyz/home",
-    tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
-  },
+  } 
 ];
 
 
