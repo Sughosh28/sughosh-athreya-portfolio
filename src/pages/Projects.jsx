@@ -34,13 +34,6 @@ const projectsData = [
   },
   
   {
-    name: "Heart Disease Prediction",
-    description:
-      "An AI-driven federated learning model designed for privacy-preserving heart disease prediction. Utilizes TensorFlow, Flower, and Flask to enable decentralized model training across multiple data sources.",
-    link: "https://github.com/Sughosh28/FL-for-heart-disease-prediction",
-    tags: ["AI", "Federated Learning", "TensorFlow", "Flask", "Healthcare"],
-  },
-  {
     name: "Blogging Platform",
     description:
       "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
