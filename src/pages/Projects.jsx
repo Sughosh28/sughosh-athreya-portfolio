@@ -4,36 +4,52 @@ import { Link } from "react-router-dom";
 const projectsData = [
   {
     name: "QuizO - A Quiz Application",
-    description: "A microservices-based quiz application using Spring Boot and PostgreSQL.",
+    description:
+      "A scalable microservices-based quiz application built with Spring Boot, PostgreSQL, and Eureka for service discovery. Supports dynamic quiz creation, result processing, and seamless inter-service communication.",
     link: "https://github.com/Sughosh28/Quiz-O",
-    tags: ["Spring Boot", "PostgreSQL", "Microservices"],
+    tags: ["Spring Boot", "PostgreSQL", "Microservices", "Eureka", "REST API"],
   },
   {
     name: "Incident Report System",
-    description: "Web application for managing incident reports with secure data handling.",
+    description:
+      "A secure web-based platform for managing incident reports, ensuring data integrity with Spring Security. Features real-time updates, CSRF protection, and audit logging.",
     link: "https://github.com/Sughosh28/IncidentReport",
-    tags: ["Web App", "Security", "Data Handling"],
+    tags: ["Spring Boot", "Spring Security",  "CSRF Protection", "REST API"],
   },
   {
     name: "Booking Bridge",
-    description: "Backend application for seamless event booking management with secure APIs and efficient data handling.",
-    link: "https://github.com/Sughosh28/event-booking-backend",
-    tags: ["Backend", "APIs", "Event Management"],
+    description:
+      "A robust event booking management backend that provides secure APIs for event creation, scheduling, and participant management. Features JWT authentication, role-based access control (RBAC), personalized email notifications, and real-time push notifications. Optimized database handling ensures high performance and scalability.",
+    link: "https://github.com/Sughosh28/booking-bridge-backend",
+    tags: [
+      "Spring Boot",
+      "REST API",
+      "JWT Authentication",
+      "RBAC",
+      "Event Booking",
+      "PostgreSQL",
+      "Email Notifications",
+      "Push Notifications"
+    ],
   },
+  
   {
     name: "Heart Disease Prediction",
-    description: "Federated learning model for predicting heart disease using AI.",
+    description:
+      "An AI-driven federated learning model designed for privacy-preserving heart disease prediction. Utilizes TensorFlow, Flower, and Flask to enable decentralized model training across multiple data sources.",
     link: "https://github.com/Sughosh28/FL-for-heart-disease-prediction",
-    tags: ["AI", "Federated Learning", "Healthcare"],
+    tags: ["AI", "Federated Learning", "TensorFlow", "Flask", "Healthcare"],
   },
   {
-    name: "Blog Platform",
-    description: "Developed a secure full-stack blog platform with React, Spring Boot, MySQL, and AWS, featuring JWT authentication, personalized emails, and NGINX load balancing.",
-    link: "https://github.com/Sughosh28/blog-backend",
+    name: "Blogging Platform",
+    description:
+      "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
+    link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
     live: "http://blogsbysughosh.xyz/home",
-    tags: ["React", "Spring Boot", "MySQL", "AWS"],
+    tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
   },
 ];
+
 
 const Projects = () => {
   
