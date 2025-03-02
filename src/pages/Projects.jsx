@@ -22,7 +22,8 @@ const projectsData = [
       "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
     link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
     // live: "http://blogsbysughosh.xyz/home",
-    tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
+    // tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
+    tags: ["React", "Spring Boot", "MySQL", "JWT"],
   },
  
   {
@@ -30,6 +31,7 @@ const projectsData = [
     description:
       "A robust event booking management backend that provides secure APIs for event creation, scheduling, and participant management. Features JWT authentication, role-based access control (RBAC), personalized email notifications, and real-time push notifications. Optimized database handling ensures high performance and scalability.",
     link: "https://github.com/Sughosh28/booking-bridge-backend",
+    live:"https://www.loom.com/share/2c34f18fa25646a3ba15783de4e64259?sid=541d894c-f691-4115-af5a-ef15f4d2d3a8",
     tags: [
       "Spring Boot",
       "REST API",
@@ -40,6 +42,7 @@ const projectsData = [
       "Email Notifications",
       "Push Notifications"
     ],
+   
   } 
 ];
 
@@ -70,6 +73,7 @@ const Projects = () => {
                 <p className="text-gray-400 mb-6">
                   {project.description}
                 </p>
+                
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, index) => (
                     <span
@@ -101,7 +105,7 @@ const Projects = () => {
                                hover:bg-slate-700 transform transition-all duration-300
                                focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 focus:ring-offset-slate-900"
                     >
-                      Live
+                      Demo
                     </Link>
                   )}
                 </div>
