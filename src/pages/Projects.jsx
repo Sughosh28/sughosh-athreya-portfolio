@@ -21,7 +21,7 @@ const projectsData = [
     description:
       "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
     link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
-    live: "http://blogsbysughosh.xyz/home",
+    // live: "http://blogsbysughosh.xyz/home",
     tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
   },
  
