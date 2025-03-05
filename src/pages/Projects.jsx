@@ -30,7 +30,7 @@ const projectsData = [
     description:
       "A robust event booking management backend that provides secure APIs for event creation, scheduling, and participant management. Features JWT authentication, role-based access control (RBAC), personalized email notifications, and real-time push notifications. Optimized database handling ensures high performance and scalability.",
     link: "https://github.com/Sughosh28/booking-bridge-backend",
-    live:"https://www.loom.com/share/2c34f18fa25646a3ba15783de4e64259?sid=541d894c-f691-4115-af5a-ef15f4d2d3a8",
+    // live:"https://www.loom.com/share/2c34f18fa25646a3ba15783de4e64259?sid=541d894c-f691-4115-af5a-ef15f4d2d3a8",
     tags: [
       "Spring Boot",
       "REST API",
