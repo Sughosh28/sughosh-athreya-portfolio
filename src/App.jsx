@@ -6,6 +6,7 @@ import HeroSection from './pages/HeroSection';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import ContactMe from './pages/ContactMe';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       <div id="projects"><Projects /></div>
       <div id="contact"><ContactMe /></div>
       <Footer />
+
+      <Analytics />
+
     </>
   );
 }
