@@ -100,6 +100,9 @@ const tailwindSvg = (
     alt="tailwindcss"
   />
 );
+const dockerImage=(
+  <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png" alt="docker"/>
+)
 const vscodeSvg = (
   <img
     width="48"
@@ -192,7 +195,7 @@ const skillsData = [
       { id: "t3", name: "VS Code", svg: vscodeSvg },
       { id: "t4", name: "Postman", svg: postmanSvg },
       { id: "t5", name: "Swagger", svg: swaggerSvg },
-      { id: "t6", name: "Cribl", svg: criblSvg },
+      { id: "t6", name: "Docker", svg: dockerImage },
     ],
   },
 ];
