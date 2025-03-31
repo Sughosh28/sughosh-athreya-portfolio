@@ -21,7 +21,7 @@ const projectsData = [
     description:
       "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
     link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
-    live: "http://blogsbysughosh.xyz/home",
+    live: "https://www.blogsbysughosh.xyz/home",
     tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
   },
  
@@ -30,14 +30,14 @@ const projectsData = [
     description:
       "A robust event booking management backend that provides secure APIs for event creation, scheduling, and participant management. Features JWT authentication, role-based access control (RBAC), personalized email notifications, and real-time push notifications. Optimized database handling ensures high performance and scalability.",
     link: "https://github.com/Sughosh28/booking-bridge-backend",
-    // live:"https://www.loom.com/share/2c34f18fa25646a3ba15783de4e64259?sid=541d894c-f691-4115-af5a-ef15f4d2d3a8",
+    live:"https://www.srss.live/home",
     tags: [
       "Spring Boot",
       "REST API",
       "JWT Authentication",
       "RBAC",
       "Event Booking",
-      "PostgreSQL",
+      "MySQL",
       "Email Notifications",
       "Push Notifications"
     ],
