@@ -44,7 +44,7 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-400 text-sm">
-                &copy; {new Date().getFullYear()} Sughosh Athreya K N. All rights reserved.
+                &copy; {new Date().getFullYear()} Sughosh Athreya K N. 
               </p>
             </div>
           </div>
