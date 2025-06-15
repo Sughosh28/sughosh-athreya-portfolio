@@ -21,7 +21,7 @@ const projectsData = [
     description:
       "A secure full-stack blogging platform with React and Spring Boot. Features JWT-based authentication, personalized email notifications, MySQL for data persistence, and NGINX for load balancing on AWS.",
     link: "https://github.com/Sughosh28/blogs-by-sughosh-backend",
-    live: "https://www.blogsbysughosh.xyz/home",
+    // live: "https://www.blogsbysughosh.xyz/home",
     tags: ["React", "Spring Boot", "MySQL", "JWT", "AWS", "NGINX"],
   },
  
@@ -30,7 +30,7 @@ const projectsData = [
     description:
       "A robust event booking management backend that provides secure APIs for event creation, scheduling, and participant management. Features JWT authentication, role-based access control (RBAC), personalized email notifications, and real-time push notifications. Optimized database handling ensures high performance and scalability.",
     link: "https://github.com/Sughosh28/booking-bridge-backend",
-    live:"https://www.srss.live/home",
+    // live:"https://www.srss.live/home",
     tags: [
       "Spring Boot",
       "REST API",
@@ -42,7 +42,23 @@ const projectsData = [
       "Push Notifications"
     ],
    
-  } 
+  }, 
+  {
+    name: "E-commerce Platform",
+    description:
+      "Full-stack e-commerce platform with secure user authentication using JWT and refresh tokens. Implemented RBAC for admin and user dashboards, product CRUD operations, image upload with AWS S3, and Redis caching for improved performance. Added product and sales analytics for admin to monitor inventory and revenue trends.",
+    link: "https://github.com/Sughosh28/rv-jewels-backend",
+    tags: [
+      "React",
+      "Spring Boot",
+      "PostgreSQL",
+      "JWT",
+      "RBAC",
+      "AWS S3",
+      "Redis",
+      "Product Analytics",
+    ],
+  },
 ];
 
 
