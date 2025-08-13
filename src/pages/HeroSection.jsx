@@ -23,7 +23,7 @@ const HeroSection = () => {
               with Java, Spring Boot, and modern web technologies.
             </p>
   
-            <div className="flex items-center gap-4 justify-center lg:justify-start text-lg text-teal-400 font-medium">
+            {/* <div className="flex items-center gap-4 justify-center lg:justify-start text-lg text-teal-400 font-medium">
               <span className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
                 Available for work
@@ -33,7 +33,7 @@ const HeroSection = () => {
                 <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
                 Open to freelancing
               </span>
-            </div>
+            </div> */}
   
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
